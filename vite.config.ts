@@ -5,6 +5,10 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Relative base path ('./') makes all compiled asset URLs relative.
+    // This allows the build folder to be deployed to ANY GitHub Pages repository
+    // automatically (agnostically of the repository name) without causing 404 blank screens.
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
