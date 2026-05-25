@@ -1,0 +1,6 @@
+{
+  "name": "Simulador BVC",
+  "description": "Un simulador financiero interactivo y narrativo sobre el mercado bursátil de la Bolsa de Valores de Colombia (BVC).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

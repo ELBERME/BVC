@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-bvc-green: #10b981;
+  --color-bvc-blue: #3b82f6;
+}
+
+/* Base styling */
+body {
+  background-color: #05070a;
+  color: #e2e8f0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Custom highly visible and extremely intuitive scrollbars to guide users to scroll down */
+html, body, *, div, section, main {
+  scrollbar-color: #10b981 #05070a !important;
+  scrollbar-width: auto !important;
+}
+
+::-webkit-scrollbar, *::-webkit-scrollbar {
+  width: 15px !important;
+  height: 15px !important;
+  display: block !important;
+}
+::-webkit-scrollbar-track, *::-webkit-scrollbar-track {
+  background: #020305 !important;
+  border-left: 2px solid #10b98133 !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.95) !important;
+}
+::-webkit-scrollbar-thumb, *::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #10b981 0%, #059669 45%, #2563eb 100%) !important;
+  border: 3px solid #020305 !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.75), inset 0 0 4px rgba(255, 255, 255, 0.4) !important;
+  cursor: pointer !important;
+}
+::-webkit-scrollbar-thumb:hover, *::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #34d399 0%, #059669 45%, #3b82f6 100%) !important;
+  box-shadow: 0 0 14px rgba(52, 211, 153, 0.95), inset 0 0 6px rgba(255, 255, 255, 0.6) !important;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Frosted Glass Core Classes */
+.glass, .glass-panel {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+}
+
+.mesh-bg {
+  background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(239, 68, 68, 0.1) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* Automated Theme Overrides for all scenes & bento grids */
+.bg-slate-900, .bg-slate-950\/80, .bg-slate-900\/40, .bg-slate-900\/60, .bg-slate-900\/80 {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.border-slate-800, .border-slate-800\/80, .border-slate-705, .border-slate-700, .border-slate-700\/60, .border-slate-900, .border-slate-850 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Class-specific overrides for inputs and selection items */
+input[type="text"], input[type="number"], select {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+  border-color: rgba(59, 130, 246, 0.5) !important;
+  outline: none !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Action panels and highlight banners */
+.bg-emerald-950\/15, .bg-emerald-950\/20, .bg-emerald-500\/10 {
+  background-color: rgba(16, 185, 129, 0.06) !important;
+  border-color: rgba(16, 185, 129, 0.25) !important;
+}
+
+.bg-red-950\/15, .bg-red-950\/20, .bg-red-500\/10 {
+  background-color: rgba(239, 68, 68, 0.06) !important;
+  border-color: rgba(239, 68, 68, 0.25) !important;
+}
+
+.bg-blue-950\/15, .bg-blue-950\/20, .bg-blue-500\/10 {
+  background-color: rgba(59, 130, 246, 0.06) !important;
+  border-color: rgba(59, 130, 246, 0.25) !important;
+}
+
+
+
